@@ -19,3 +19,9 @@ commands:
       group:
         kind: run
         isDefault: true
+        volumeMounts:
+          - name: cache
+            path: /.cache
+  - name: cache
+    volume:
+      size: 1Gi
