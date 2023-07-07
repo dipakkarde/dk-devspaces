@@ -8,6 +8,12 @@ components:
     container:
       image: quay.io/devfile/universal-developer-image:ubi8-latest 
       memoryLimit: 4Gi
+      volumeMounts:
+        - name: cache
+          path: /.cache
+  - name: cache
+    volume:
+      size: 1Gi
 commands:
   - id: run-main-script
     exec:
@@ -19,9 +25,3 @@ commands:
       group:
         kind: run
         isDefault: true
-        volumeMounts:
-          - name: cache
-            path: /.cache
-  - name: cache
-    volume:
-      size: 1Gi
