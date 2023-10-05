@@ -18,7 +18,7 @@ components:
       endpoints:
         - exposure: public
           name: hello-endpoint
-          protocol: https
+          protocol: http
           targetPort: 5032
       env:
         - name: CHE_DASHBOARD_URL
