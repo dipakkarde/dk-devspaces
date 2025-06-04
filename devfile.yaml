@@ -1,7 +1,16 @@
 schemaVersion: 2.1.0
 metadata:
-  name: testing-custom-image
-components:      
-  - name: tools
+  name: mydevfile
+components:
+  - name: golang
     container:
-      image: quay.io/dipakkarde/my-project/udi-rhel9
+      image: golang
+      memoryLimit: 512Mi
+      mountSources: true
+      command: ['sleep', 'infinity']
+      volumeMounts:
+        - name: testvol
+          path: /home/user
+  - name: testvol
+    volume:
+      size: 2Gi
