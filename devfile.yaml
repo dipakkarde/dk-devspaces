@@ -1,6 +1,6 @@
 schemaVersion: 2.1.0
 metadata:
-  generateName: testing-custom-image
+  name: testing-custom-image
 components:      
   - name: tools
     container:
